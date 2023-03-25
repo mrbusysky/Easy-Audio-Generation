@@ -5,8 +5,6 @@ Does not require technical knowledge, does not require pre-installed software. 1
 
 [Installation guide](#installation) | [Troubleshooting guide](https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting) | <sub>[![Discord Server](https://img.shields.io/discord/1014774730907209781?label=Discord)](https://discord.com/invite/u9yhsFmEkB)</sub> <sup>(for support queries, and development discussions)</sup>
 
-![t2i](https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/assets/stable-samples/txt2img/768/merged-0006.png)
-
 # Installation
 Click the download button for your operating system:
 
