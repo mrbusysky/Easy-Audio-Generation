@@ -17,7 +17,7 @@ Click the download button for your operating system:
 The installer will take care of whatever is needed. If you face any problems, you can join the friendly [Discord community](https://discord.com/invite/u9yhsFmEkB) and ask for assistance.
 
 ## On Windows:
-1. Run the downloaded `Easy-Diffusion-Windows.exe` file.
+1. Run the downloaded `Easy-Audio-Generation-Windows.exe` file.
 2. Run `Easy Diffusion` once the installation finishes. You can also start from your Start Menu, or from your desktop (if you created a shortcut).
 
 If Windows SmartScreen prevents you from running the program click `More info` and then `Run anyway`.
