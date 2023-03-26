@@ -9,9 +9,9 @@ Does not require technical knowledge, does not require pre-installed software. 1
 Click the download button for your operating system:
 
 <p float="left">
-  <a href="https://github.com/cmdr2/stable-diffusion-ui/releases/download/v2.5.24/Easy-Diffusion-Windows.exe"><img src="https://github.com/cmdr2/stable-diffusion-ui/raw/main/media/download-win.png" width="200" /></a>
-  <a href="https://github.com/cmdr2/stable-diffusion-ui/releases/download/v2.5.24/Easy-Diffusion-Linux.zip"><img src="https://github.com/cmdr2/stable-diffusion-ui/raw/main/media/download-linux.png" width="200" /></a>
-  <a href="https://github.com/cmdr2/stable-diffusion-ui/releases/download/v2.5.24/Easy-Diffusion-Mac.zip"><img src="https://github.com/cmdr2/stable-diffusion-ui/raw/main/media/download-mac.png" width="200" /></a>
+  <a href="https://github.com/cmdr2/stable-diffusion-ui/releases/download/v2.5.24/Easy-Diffusion-Windows.exe"><img src="https://github.com/mrbusysky/Easy-Audio-Generation/raw/main/media/download-win.png" width="200" /></a>
+  <a href="https://github.com/mrbusysky/Easy-Audio-Generation/releases/download/v2.5.24/Easy-Diffusion-Linux.zip"><img src="https://github.com/mrbusysky/Easy-Audio-Generation/raw/main/media/download-linux.png" width="200" /></a>
+  <a href="https://github.com/mrbusysky/Easy-Audio-Generation/releases/download/v2.5.24/Easy-Diffusion-Mac.zip"><img src="https://github.com/mrbusysky/Easy-Audio-Generation/raw/main/media/download-mac.png" width="200" /></a>
 </p>
 
 The installer will take care of whatever is needed. If you face any problems, you can join the friendly [Discord community](https://discord.com/invite/u9yhsFmEkB) and ask for assistance.
@@ -44,10 +44,10 @@ You don't need to install or struggle with Python, Anaconda, Docker etc. The ins
 ----
 
 # How to use?
-Please refer to our [guide](https://github.com/cmdr2/stable-diffusion-ui/wiki/How-to-Use) to understand how to use the features in this UI.
+Please refer to our [guide](https://github.com/mrbusysky/Easy-Audio-Generation/wiki/How-to-Use) to understand how to use the features in this UI.
 
 # Bugs reports and code contributions welcome
-If there are any problems or suggestions, please feel free to ask on the [discord server](https://discord.com/invite/u9yhsFmEkB) or [file an issue](https://github.com/cmdr2/stable-diffusion-ui/issues).
+If there are any problems or suggestions, please feel free to ask on the [discord server](https://discord.com/invite/u9yhsFmEkB) or [file an issue](https://github.com/mrbusysky/Easy-Audio-Generation/issues).
 
 We could really use help on these aspects (click to view tasks that need your help):
 * [User Interface](https://github.com/users/cmdr2/projects/1/views/1)
