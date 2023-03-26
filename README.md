@@ -18,15 +18,15 @@ The installer will take care of whatever is needed. If you face any problems, yo
 
 ## On Windows:
 1. Run the downloaded `Easy-Audio-Generation-Windows.exe` file.
-2. Run `Easy Diffusion` once the installation finishes. You can also start from your Start Menu, or from your desktop (if you created a shortcut).
+2. Run `Easy-Audio-Generation` once the installation finishes. You can also start from your Start Menu, or from your desktop (if you created a shortcut).
 
 If Windows SmartScreen prevents you from running the program click `More info` and then `Run anyway`.
 
-**Tip:** On Windows 10, please install at the top level in your drive, e.g. `C:\EasyDiffusion` or `D:\EasyDiffusion`. This will avoid a common problem with Windows 10 (file path length limits).
+**Tip:** On Windows 10, please install at the top level in your drive, e.g. `C:\EasyAudioGeneration` or `D:\EasyAudioGeneration`. This will avoid a common problem with Windows 10 (file path length limits).
 
 ## On Linux/Mac:
-1. Unzip/extract the folder `easy-diffusion` which should be in your downloads folder, unless you changed your default downloads destination.
-2. Open a terminal window, and navigate to the `easy-diffusion` directory.
+1. Unzip/extract the folder `Easy-Audio-Generation` which should be in your downloads folder, unless you changed your default downloads destination.
+2. Open a terminal window, and navigate to the `Easy-Audio-Generation` directory.
 3. Run `./start.sh` (or `bash start.sh`) in a terminal.
 
 # To remove/uninstall:
