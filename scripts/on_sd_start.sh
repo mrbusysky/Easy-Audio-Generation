@@ -141,9 +141,9 @@ else
 fi
 
 if python ../scripts/check_modules.py uvicorn fastapi ; then
-    echo "Packages necessary for Easy Diffusion were already installed"
+    echo "Packages necessary for Easy Audio Generation were already installed"
 else
-    printf "\n\nDownloading packages necessary for Easy Diffusion..\n\n"
+    printf "\n\nDownloading packages necessary for Easy Audio Generation..\n\n"
 
     export PYTHONNOUSERSITE=1
     export PYTHONPATH="$INSTALL_ENV_DIR/lib/python3.8/site-packages"
@@ -287,12 +287,12 @@ if [ ! -f "../models/vae/vae-ft-mse-840000-ema-pruned.ckpt" ]; then
         model_size=`filesize "../models/vae/vae-ft-mse-840000-ema-pruned.ckpt"`
         if [ ! "$model_size" -eq "334695179" ]; then
             printf "\n\nError: The downloaded default VAE (sd-vae-ft-mse-original) file was invalid! Bytes downloaded: $model_size\n\n"
-            printf "\n\nError downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:\n  1. Run this installer again.\n  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting\n  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB\n  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues\nThanks!\n\n"
+            printf "\n\nError downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:\n  1. Run this installer again.\n  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting\n  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB\n  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues\nThanks!\n\n"
             read -p "Press any key to continue"
             exit
         fi
     else
-        printf "\n\nError downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:\n  1. Run this installer again.\n  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting\n  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB\n  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues\nThanks!\n\n"
+        printf "\n\nError downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:\n  1. Run this installer again.\n  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting\n  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB\n  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues\nThanks!\n\n"
         read -p "Press any key to continue"
         exit
     fi

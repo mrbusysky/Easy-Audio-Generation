@@ -1,6 +1,6 @@
 @echo off
 
-@echo. & echo "Easy Diffusion - v2" & echo.
+@echo. & echo "Easy Audio Generation - v0.1.0" & echo.
 
 set PATH=C:\Windows\System32;%PATH%
 
@@ -16,10 +16,10 @@ if "%update_branch%"=="" (
 @if "%ERRORLEVEL%" NEQ "0" (
     for /f "tokens=*" %%a in ('python -c "import os; parts = os.getcwd().split(os.path.sep); print(len(parts))"') do if "%%a" NEQ "2" (
         echo. & echo "!!!! WARNING !!!!" & echo.
-        echo "Your 'stable-diffusion-ui' folder is at %cd%" & echo.
-        echo "The 'stable-diffusion-ui' folder needs to be at the top of your drive, for e.g. 'C:\stable-diffusion-ui' or 'D:\stable-diffusion-ui' etc."
+        echo "Your 'Easy-Audio-Generation' folder is at %cd%" & echo.
+        echo "The 'Easy-Audio-Generation' folder needs to be at the top of your drive, for e.g. 'C:\Easy-Audio-Generation' or 'D:\Easy-Audio-Generation' etc."
         echo "Not placing this folder at the top of a drive can cause errors on some computers."
-        echo. & echo "Recommended: Please close this window and move the 'stable-diffusion-ui' folder to the top of a drive. For e.g. 'C:\stable-diffusion-ui'. Then run the installer again." & echo.
+        echo. & echo "Recommended: Please close this window and move the 'stable-diffusion-ui' folder to the top of a drive. For e.g. 'C:\Easy-Audio-Generation'. Then run the installer again." & echo.
         echo "Not Recommended: If you're sure that you want to install at the current location, please press any key to continue." & echo.
 
         pause
@@ -28,7 +28,7 @@ if "%update_branch%"=="" (
 
 @>nul findstr /m "sd_ui_git_cloned" scripts\install_status.txt
 @if "%ERRORLEVEL%" EQU "0" (
-    @echo "Easy Diffusion's git repository was already installed. Updating from %update_branch%.."
+    @echo "Easy Audio Generation's git repository was already installed. Updating from %update_branch%.."
 
     @cd sd-ui-files
 
@@ -38,13 +38,13 @@ if "%update_branch%"=="" (
 
     @cd ..
 ) else (
-    @echo. & echo "Downloading Easy Diffusion..." & echo.
+    @echo. & echo "Downloading Easy Audio Generation..." & echo.
     @echo "Using the %update_branch% channel" & echo.
 
-    @call git clone -b "%update_branch%" https://github.com/cmdr2/stable-diffusion-ui.git sd-ui-files && (
+    @call git clone -b "%update_branch%" https://github.com/mrbusysky/Easy-Audio-Generation.git sd-ui-files && (
         @echo sd_ui_git_cloned >> scripts\install_status.txt
     ) || (
-        @echo "Error downloading Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
+        @echo "Error downloading Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
         pause
         @exit /b
     )
@@ -53,7 +53,7 @@ if "%update_branch%"=="" (
 @xcopy sd-ui-files\ui ui /s /i /Y /q
 @copy sd-ui-files\scripts\on_sd_start.bat scripts\ /Y
 @copy sd-ui-files\scripts\check_modules.py scripts\ /Y
-@copy "sd-ui-files\scripts\Start Stable Diffusion UI.cmd" . /Y
+@copy "sd-ui-files\scripts\Start Easy Audio Generation UI.cmd" . /Y
 @copy "sd-ui-files\scripts\Developer Console.cmd" . /Y
 
 @call scripts\on_sd_start.bat

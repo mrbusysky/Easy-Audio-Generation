@@ -1,6 +1,6 @@
 @echo off
 
-echo "Opening Stable Diffusion UI - Developer Console.." & echo.
+echo "Opening Easy Audio Generation - Developer Console.." & echo.
 
 set PATH=C:\Windows\System32;%PATH%
 

@@ -15,7 +15,7 @@ if exist "%cd%\profile" (
 if exist "%cd%\installer_files\env" (
     set INSTALL_ENV_DIR=%cd%\installer_files\env
 )
-if exist "%cd%\stable-diffusion\env" (
+if exist "%cd%\Easy-Audio-Generation\env" (
     set INSTALL_ENV_DIR=%cd%\stable-diffusion\env
 )
 
@@ -26,7 +26,7 @@ if exist "%cd%\stable-diffusion\env" (
 @rem activate the installer env
 call conda activate
 @if "%ERRORLEVEL%" NEQ "0" (
-       @echo. & echo "Error activating conda for Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+       @echo. & echo "Error activating conda for Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
        pause
        exit /b
 )
@@ -76,7 +76,7 @@ if "%ERRORLEVEL%" EQU "0" (
     set PYTHONPATH=%INSTALL_ENV_DIR%\lib\site-packages
 
     call python -m pip install --upgrade torch==1.13.1+cu116 torchvision==0.14.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116 || (
-        echo "Error installing torch. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
+        echo "Error installing torch. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!"
         pause
         exit /b
     )
@@ -107,7 +107,7 @@ if "%ERRORLEVEL%" EQU "0" (
     set PYTHONPATH=%INSTALL_ENV_DIR%\lib\site-packages
 
     call python -m pip install sdkit==1.0.55 || (
-        echo "Error installing sdkit. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
+        echo "Error installing sdkit. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!"
         pause
         exit /b
     )
@@ -132,7 +132,7 @@ if "%ERRORLEVEL%" EQU "0" (
     set PYTHONPATH=%INSTALL_ENV_DIR%\lib\site-packages
 
     call python -m pip install rich || (
-        echo "Error installing rich. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
+        echo "Error installing rich. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!"
         pause
         exit /b
     )
@@ -150,7 +150,7 @@ call python ..\scripts\check_modules.py uvicorn fastapi
     set PYTHONPATH=%INSTALL_ENV_DIR%\lib\site-packages
 
     @call conda install -c conda-forge -y uvicorn fastapi || (
-        echo "Error installing the packages necessary for Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!"
+        echo "Error installing the packages necessary for Easy Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!"
         pause
         exit /b
     )
@@ -159,7 +159,7 @@ call python ..\scripts\check_modules.py uvicorn fastapi
 call WHERE uvicorn > .tmp
 @>nul findstr /m "uvicorn" .tmp
 @if "%ERRORLEVEL%" NEQ "0" (
-    @echo. & echo "UI packages not found! Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+    @echo. & echo "UI packages not found! Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
     pause
     exit /b
 )
@@ -194,12 +194,12 @@ call WHERE uvicorn > .tmp
     @if exist "..\models\stable-diffusion\sd-v1-4.ckpt" (
         for %%I in ("..\models\stable-diffusion\sd-v1-4.ckpt") do if "%%~zI" NEQ "4265380512" (
             echo. & echo "Error: The downloaded model file was invalid! Bytes downloaded: %%~zI" & echo.
-            echo. & echo "Error downloading the data files (weights) for Stable Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+            echo. & echo "Error downloading the data files (weights) for Stable Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
             pause
             exit /b
         )
     ) else (
-        @echo. & echo "Error downloading the data files (weights) for Stable Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+        @echo. & echo "Error downloading the data files (weights) for Stable Diffusion. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
         pause
         exit /b
     )
@@ -224,12 +224,12 @@ call WHERE uvicorn > .tmp
     @if exist "..\models\gfpgan\GFPGANv1.3.pth" (
         for %%I in ("..\models\gfpgan\GFPGANv1.3.pth") do if "%%~zI" NEQ "348632874" (
             echo. & echo "Error: The downloaded GFPGAN model file was invalid! Bytes downloaded: %%~zI" & echo.
-            echo. & echo "Error downloading the data files (weights) for GFPGAN (Face Correction). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+            echo. & echo "Error downloading the data files (weights) for GFPGAN (Face Correction). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
             pause
             exit /b
         )
     ) else (
-        @echo. & echo "Error downloading the data files (weights) for GFPGAN (Face Correction). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+        @echo. & echo "Error downloading the data files (weights) for GFPGAN (Face Correction). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
         pause
         exit /b
     )
@@ -254,12 +254,12 @@ call WHERE uvicorn > .tmp
     @if exist "..\models\realesrgan\RealESRGAN_x4plus.pth" (
         for %%I in ("..\models\realesrgan\RealESRGAN_x4plus.pth") do if "%%~zI" NEQ "67040989" (
             echo. & echo "Error: The downloaded ESRGAN x4plus model file was invalid! Bytes downloaded: %%~zI" & echo.
-            echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+            echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
             pause
             exit /b
         )
     ) else (
-        @echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+        @echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
         pause
         exit /b
     )
@@ -284,12 +284,12 @@ call WHERE uvicorn > .tmp
     @if exist "..\models\realesrgan\RealESRGAN_x4plus_anime_6B.pth" (
         for %%I in ("..\models\realesrgan\RealESRGAN_x4plus_anime_6B.pth") do if "%%~zI" NEQ "17938799" (
             echo. & echo "Error: The downloaded ESRGAN x4plus_anime model file was invalid! Bytes downloaded: %%~zI" & echo.
-            echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus_anime. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+            echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus_anime. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
             pause
             exit /b
         )
     ) else (
-        @echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus_anime. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+        @echo. & echo "Error downloading the data files (weights) for ESRGAN (Resolution Upscaling) x4plus_anime. Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/mrbusysky/Easy-Audio-Generation/issues" & echo "Thanks!" & echo.
         pause
         exit /b
     )
@@ -314,12 +314,12 @@ call WHERE uvicorn > .tmp
     @if exist "..\models\vae\vae-ft-mse-840000-ema-pruned.ckpt" (
         for %%I in ("..\models\vae\vae-ft-mse-840000-ema-pruned.ckpt") do if "%%~zI" NEQ "334695179" (
             echo. & echo "Error: The downloaded default VAE (sd-vae-ft-mse-original) file was invalid! Bytes downloaded: %%~zI" & echo.
-            echo. & echo "Error downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+            echo. & echo "Error downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
             pause
             exit /b
         )
     ) else (
-        @echo. & echo "Error downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/cmdr2/stable-diffusion-ui/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
+        @echo. & echo "Error downloading the data files (weights) for the default VAE (sd-vae-ft-mse-original). Sorry about that, please try to:" & echo "  1. Run this installer again." & echo "  2. If that doesn't fix it, please try the common troubleshooting steps at https://github.com/mrbusysky/Easy-Audio-Generation/wiki/Troubleshooting" & echo "  3. If those steps don't help, please copy *all* the error messages in this window, and ask the community at https://discord.com/invite/u9yhsFmEkB" & echo "  4. If that doesn't solve the problem, please file an issue at https://github.com/cmdr2/stable-diffusion-ui/issues" & echo "Thanks!" & echo.
         pause
         exit /b
     )

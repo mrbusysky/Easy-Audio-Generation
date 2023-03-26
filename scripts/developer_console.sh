@@ -3,7 +3,7 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 if [ "$0" == "bash" ]; then
-  echo "Opening Stable Diffusion UI - Developer Console.."
+  echo "Opening Easy Audio Generation - Developer Console.."
   echo ""
 
   # set legacy and new installer's PATH, if they exist

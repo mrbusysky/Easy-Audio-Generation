@@ -2,7 +2,7 @@
 
 source ./scripts/functions.sh
 
-printf "\n\nEasy Diffusion\n\n"
+printf "\n\nEasy Audio Generation\n\n"
 
 if [ -f "scripts/config.sh" ]; then
     source scripts/config.sh
@@ -13,7 +13,7 @@ if [ "$update_branch" == "" ]; then
 fi
 
 if [ -f "scripts/install_status.txt" ] && [ `grep -c sd_ui_git_cloned scripts/install_status.txt` -gt "0" ]; then
-    echo "Easy Diffusion's git repository was already installed. Updating from $update_branch.."
+    echo "Easy Audio Generation's git repository was already installed. Updating from $update_branch.."
 
     cd sd-ui-files
 
@@ -23,10 +23,10 @@ if [ -f "scripts/install_status.txt" ] && [ `grep -c sd_ui_git_cloned scripts/in
 
     cd ..
 else
-    printf "\n\nDownloading Easy Diffusion..\n\n"
+    printf "\n\nDownloading Easy Audio Generation..\n\n"
     printf "Using the $update_branch channel\n\n"
 
-    if git clone -b "$update_branch" https://github.com/cmdr2/stable-diffusion-ui.git sd-ui-files ; then
+    if git clone -b "$update_branch" https://github.com/mrbusysky/Easy-Audio-Generation.git sd-ui-files ; then
         echo sd_ui_git_cloned >> scripts/install_status.txt
     else
         fail "git clone failed"
