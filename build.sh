@@ -18,7 +18,7 @@ mkdir -p dist/linux-mac/stable-diffusion-ui/scripts
 
 # cp scripts/on_env_start.bat dist/win/stable-diffusion-ui/scripts/
 # cp scripts/bootstrap.bat dist/win/stable-diffusion-ui/scripts/
-# cp "scripts/Start Stable Diffusion UI.cmd" dist/win/stable-diffusion-ui/
+# cp "scripts/Easy Audio Generation UI.cmd" dist/win/stable-diffusion-ui/
 # cp LICENSE dist/win/stable-diffusion-ui/
 # cp "CreativeML Open RAIL-M License" dist/win/stable-diffusion-ui/
 # cp "How to install and run.txt" dist/win/stable-diffusion-ui/
