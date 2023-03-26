@@ -30,7 +30,7 @@ If Windows SmartScreen prevents you from running the program click `More info` a
 3. Run `./start.sh` (or `bash start.sh`) in a terminal.
 
 # To remove/uninstall:
-Just delete the `EasyDiffusion` folder to uninstall all the downloaded packages.
+Just delete the `EasyAudioGeneration` folder to uninstall all the downloaded packages.
 
 ----
 
