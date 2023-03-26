@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matching Files</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Add this style to remove the bullet from ul items */
+    ul {
+      list-style: none;
+    }
+
+    #data-table {
+      max-width: 1200px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    table {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Matching Files</h1>
+  <table id="data-table">
+  </table>
+  <script>
+    // Load the JSON data from a file
+    fetch("matching_files.json")
+      .then(response => response.json())
+      .then(data => {
+        // Loop through the array of objects and create an HTML table
+        let table = "<table><tr><th>Hash</th><th>File Names</th><th>Audio</th></tr>";
+        data.forEach(obj => {
+          let filenames = obj.filenames.map(file => `<li>${file.name}</li>`).join("");
+          let audio = obj.filenames.map(file => `<li><audio controls><source src="${file.filepath}" type="audio/mpeg"></audio></li>`).join("");
+          let filenamesTd = `<td><ul>${filenames}</ul></td>`;
+          let audioTd = `<td><ul>${audio}</ul></td>`;
+          table += `<tr><td>${obj.hash}</td>${filenamesTd}${audioTd}</tr>`;
+        });
+        table += "</table>";
+        // Add the table to the HTML page
+        document.getElementById("data-table").innerHTML = table;
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
